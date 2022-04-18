@@ -98,6 +98,8 @@ function flipACoin(call) {
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+
 var port = 5000;
 
 // Start an app server
