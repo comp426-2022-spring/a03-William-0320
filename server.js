@@ -127,7 +127,12 @@ app.get('/app/flip', (req, res) => {
 
 app.get('/app/flip/call/heads', (req, res) => {
   const flip = flipACoin("heads");
-  res.status(200).json({"call": "heads", "flip": flip});
+  res.status(200).json(flip);
+})
+
+app.get('/app/flip/call/tails', (req, res) => {
+  const flip = flipACoin("tails");
+  res.status(200).json(flip);
 })
 
 // Default response for any other request
